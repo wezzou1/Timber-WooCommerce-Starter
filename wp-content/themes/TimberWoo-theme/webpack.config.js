@@ -43,16 +43,12 @@ module.exports = {
 			test: /\.js$/,
 			exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
 			use: [
-			{
-				loader: 'babel-loader',
-				options: {
-					cacheDirectory: true,
-					presets: [
-					[ "@babel/preset-env" ]
-					],
-					plugins: ['@babel/plugin-syntax-dynamic-import']
-				},
-			}
+				{
+					loader: 'babel-loader',
+					options: {
+						presets: ["@babel/preset-env"]
+					}
+				}
 			],
 		},
 		{
